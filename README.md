@@ -1,8 +1,9 @@
 #Summative assessment
 
 Event Registration Form
+
 Overview
-This project is a simple registration form for a fictional event. The form allows users to sign up by providing their name, email, phone number, event date, and the number of tickets they wish to purchase. This README provides details on how to use the form, the validation rules for each field, and an overview of the project structure.
+This  is a simple registration form for a fictional event. The form allows users to sign up by providing their name, email, phone number, event date, and the number of tickets they wish to purchase. This README provides details on how to use the form, the validation rules for each field, and an overview of the project structure.
 
 How to Use
 To use the Event Registration Form, follow these steps:
@@ -26,9 +27,9 @@ Project Structure
 
 The project contains the following files:
 
-.index.html: The HTML file containing the registration form.
-. style.css: The CSS file for styling the form.
-. script.js: The JavaScript file containing form validation logic.
+index.html: The HTML file containing the registration form.
+style.css: The CSS file for styling the form.
+script.js: The JavaScript file containing form validation logic.
 
 Technologies Used
 The project uses HTML, CSS, and JavaScript for creating the registration form and implementing client-side validation.
