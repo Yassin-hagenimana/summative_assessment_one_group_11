@@ -7,17 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <h2>Event Registration</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-    <label for="phone">Phone Number:</label>
-    <input type="text" id="phone" required>
-    <label for="date">Event Date:</label>
-    <input type="date" id="date" required>
-    <label for="ticket">Number of tickets:</label>
-    <input type="number" id="ticket">
-    <button id="submit">Register</button>
+    <div class="container">
+        <h2>Event Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ticket">Number of Tickets:</label>
+                <input type="number" id="ticket" class="form-control" min="1" max="10">
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn-register">Register</button>
+            </div>
+            <div id="message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
