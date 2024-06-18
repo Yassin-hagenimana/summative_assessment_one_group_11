@@ -36,16 +36,10 @@ function eventFormValidationSchema(name, email, phoneNumber, eventDate, numberOf
 }
 
 // Example usage:
-const validationResult = eventFormValidationSchema(
-    "John Doe", 
-    "john.doe@example.com", 
-    "(123) 456-7890", 
-    "06/18/2024", 
-    "5"
-);
-
-if (validationResult.valid) {
-    console.log("Form validation successful");
-} else {
-    console.error(`Form validation failed: ${validationResult.message}`);
-}
+// const validationResult = eventFormValidationSchema(
+//     "John Doe", 
+//     "john.doe@example.com", 
+//     "(123) 456-7890", 
+//     "06/18/2024", 
+//     "5"
+// );
