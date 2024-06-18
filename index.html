@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./javascript/validator.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,22 +14,27 @@
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" class="form-control" required>
+                <span id="nameError" class="error"></span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" class="form-control" required>
+                <span id="emailError" class="error"></span>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" class="form-control" required>
+                <input type="text" id="phoneNumber" class="form-control" required>
+                <span id="phoneNumberError" class="error"></span>
             </div>
             <div class="form-group">
                 <label for="date">Event Date:</label>
-                <input type="date" id="date" class="form-control" required>
+                <input type="date" id="eventDate" class="form-control" required>
+                <span id="eventDateError" class="error"></span>
             </div>
             <div class="form-group">
                 <label for="ticket">Number of Tickets:</label>
-                <input type="number" id="ticket" class="form-control" min="1" max="10">
+                <input type="number" id="numberOfTickets" class="form-control" min="1" max="10">
+                <span id="numberOfTicketsError" class="error"></span>
             </div>
             <div class="form-group">
                 <button type="submit" id="submit" class="btn-register">Register</button>
@@ -37,6 +43,48 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+          document.getElementById("registrationForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phoneNumber = document.getElementById("phoneNumber").value.trim();
+            const eventDate = document.getElementById("eventDate").value.trim();
+            const numberOfTickets = document.getElementById("numberOfTickets").value.trim();
+
+
+            const validationResult = eventFormValidationSchema(name, email, phoneNumber, eventDate, numberOfTickets);
+            console.log("validation results..... ", validationResult);
+           
+            if (validationResult.valid) {
+                // Form data is valid, you can proceed with submission or other actions
+                alert("Form submission successful!");
+                // Example: Submit form data to server
+                // submitFormData(name, email, phoneNumber, eventDate, numberOfTickets);
+            } else {
+                // Form data is invalid, display error messages
+                displayErrors(validationResult.errors);
+            }
+          })
+
+          function displayErrors(errors) {
+            for (const field in errors) {
+                const errorMessage = errors[field];
+                const errorElement = document.getElementById(`${field}Error`);
+                if (errorElement) {
+                    errorElement.textContent = errorMessage;
+                }
+            }
+        }
+
+        // Function to reset all error messages
+        function resetErrors() {
+            const errorElements = document.querySelectorAll(".error");
+            errorElements.forEach(function(element) {
+                element.textContent = "";
+            });
+        }
+    </script>
 </body>
 </html>
