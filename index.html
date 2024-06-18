@@ -48,6 +48,7 @@
     <script>
           document.getElementById("registrationForm").addEventListener("submit", function(event){
             event.preventDefault();
+            resetErrors();
 
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
@@ -57,15 +58,10 @@
 
 
             const validationResult = eventFormValidationSchema(name, email, phoneNumber, eventDate, numberOfTickets);
-            console.log("validation results..... ", validationResult);
            
             if (validationResult.valid) {
-                // Form data is valid, you can proceed with submission or other actions
                 alert("Form submission successful!");
-                // Example: Submit form data to server
-                // submitFormData(name, email, phoneNumber, eventDate, numberOfTickets);
             } else {
-                // Form data is invalid, display error messages
                 displayErrors(validationResult.errors);
             }
           })
@@ -80,7 +76,6 @@
             }
         }
 
-        // Function to reset all error messages
         function resetErrors() {
             const errorElements = document.querySelectorAll(".error");
             errorElements.forEach(function(element) {

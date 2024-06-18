@@ -3,8 +3,8 @@ function eventFormValidationSchema(name, email, phoneNumber, eventDate, numberOf
     // Regular expressions for validation
     const nameRegex = /^[a-zA-Z ]+$/; // Allows letters and spaces only
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validates email format
-    const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/; // Validates (123) 456-7890 format
-    const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Validates MM/DD/YYYY format
+    const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/; // Mike please change this regex. By now it is hard codes to be this number (123) 456-7890. change it to be any number of this format
+    const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/; // Mike please also change this regex to be any date in the format MM/DD/YYYY
     const ticketsRegex = /^[1-9]|10$/; // Validates number between 1 and 10
 
     // Object to store errors
