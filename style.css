@@ -123,3 +123,8 @@ button:hover::before {
         transform: translateY(0);
     }
 }
+
+.error{
+    color: red;
+    font-size: 12px;
+}
