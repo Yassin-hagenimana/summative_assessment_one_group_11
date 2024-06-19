@@ -32,9 +32,10 @@ h2 {
     color: #333;
     margin-bottom: 20px;
     position: relative;
-    opacity: 0;
+    opacity: 10px;
     transform: translateY(20px);
     animation: slideIn 0.5s ease-out forwards;
+    font-size: 19px;
 }
 
 .form-group {
