@@ -8,7 +8,7 @@ This  is a simple registration form for a fictional event. The form allows users
 How to Use
 To use the Event Registration Form, follow these steps:
 
-1. Open the index.html file in a web browser.
+1. Open the index.html file in a web browser or use the link https://events-registration-a1fx.onrender.com.
 2. Fill in the required fields: Name, Email, Phone Number, Event Date, and Number of Tickets.
 3. Click the "Register" button to submit the form.
 If any fields are filled incorrectly, appropriate error messages will be displayed.
