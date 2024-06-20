@@ -22,7 +22,7 @@ function eventFormValidationSchema(name, email, phoneNumber, eventDate, numberOf
 
     // Validate Phone Number
     if (!phoneRegex.test(phoneNumber)) {
-        errors.phoneNumber = "Please enter a valid phone number in (123) 456789109 format";
+        errors.phoneNumber = "Please enter a valid phone number in (123) 456-7890 format";
     }
 
     // Validate Event Date
